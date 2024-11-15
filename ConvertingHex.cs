@@ -26,8 +26,19 @@ namespace RecodingWord
                 // Проверяем, есть ли буква в словаре
                 if (keyValuePairs.TryGetValue(letterStr, out string value))
                 {
-                    // Если найдено, добавляем значение к StringBuilder
-                    stringBuilder.Append(value+" ");
+                    try
+                    {
+                        if (value == "" || value == null)
+                        {
+                            continue;
+                        }
+                        // Если найдено, добавляем значение к StringBuilder
+                        stringBuilder.Append(value + " ");
+                    }
+                    catch (Exception)
+                    {
+                    }
+
                 }
                 else
                 {
