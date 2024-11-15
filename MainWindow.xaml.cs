@@ -141,7 +141,7 @@ namespace RecodingWord
                     name += s+",";
                 }
                 name = name.Remove(name.Length - 1);
-                name += "}";
+                name += "};";
                 string nameFile = $"phrase";
                 string format = "h";
                 string path = GetSavePath(nameFile, format);
